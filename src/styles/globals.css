@@ -1,8 +1,4 @@
 @custom-variant dark (&:is(.dark *));
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 
 :root {
   --font-size: 14px;
@@ -43,16 +39,23 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --casimiro-gold: #d4af37;
-  --casimiro-gold-light: #f4e4a1; /* Agrega esta línea - amarillo más claro */
   
-  /* Proyecto Casimiro Custom Colors */
-  --casimiro-black: #0a0a0a;
-  --casimiro-night-blue: #1a1f3a;
-  --casimiro-gold: #d4af37;
-  --casimiro-copper: #b87333;
-  --casimiro-gold-muted: rgba(212, 175, 55, 0.2);
-  --casimiro-copper-muted: rgba(184, 115, 51, 0.2);
+  /* New Refined Color Palette */
+  --casimiro-pure-black: #000000;
+  --casimiro-rich-black: #0a0a0a;
+  --casimiro-charcoal: #1a1a1a;
+  --casimiro-pure-white: #ffffff;
+  --casimiro-off-white: #fafafa;
+  --casimiro-light-gray: #f5f5f5;
+  --casimiro-medium-gray: #666666;
+  --casimiro-dark-gray: #333333;
+  
+  /* Subtle Golden Accents */
+  --casimiro-gold-subtle: #c9a96e;
+  --casimiro-gold-refined: #b8941f;
+  --casimiro-gold-accent: rgba(201, 169, 110, 0.15);
+  --casimiro-gold-hover: rgba(201, 169, 110, 0.25);
+  --casimiro-gold-focus: rgba(201, 169, 110, 0.35);
 }
 
 .dark {
@@ -132,19 +135,25 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Custom Casimiro Colors for Tailwind */
-  --color-casimiro-black: var(--casimiro-black);
-  --color-casimiro-night-blue: var(--casimiro-night-blue);
-  --color-casimiro-gold: var(--casimiro-gold);
-  --color-casimiro-copper: var(--casimiro-copper);
-  --color-casimiro-gold-muted: var(--casimiro-gold-muted);
-  --color-casimiro-copper-muted: var(--casimiro-copper-muted);
+  /* New Color Variables */
+  --color-casimiro-pure-black: var(--casimiro-pure-black);
+  --color-casimiro-rich-black: var(--casimiro-rich-black);
+  --color-casimiro-charcoal: var(--casimiro-charcoal);
+  --color-casimiro-pure-white: var(--casimiro-pure-white);
+  --color-casimiro-off-white: var(--casimiro-off-white);
+  --color-casimiro-light-gray: var(--casimiro-light-gray);
+  --color-casimiro-medium-gray: var(--casimiro-medium-gray);
+  --color-casimiro-dark-gray: var(--casimiro-dark-gray);
+  --color-casimiro-gold-subtle: var(--casimiro-gold-subtle);
+  --color-casimiro-gold-refined: var(--casimiro-gold-refined);
+  --color-casimiro-gold-accent: var(--casimiro-gold-accent);
+  --color-casimiro-gold-hover: var(--casimiro-gold-hover);
+  --color-casimiro-gold-focus: var(--casimiro-gold-focus);
 }
 
 @layer base {
   * {
-    @apply border-border outline-1 outline-[#d4af37]/50;
-
+    @apply border-border outline-ring/50;
   }
 
   body {
@@ -212,31 +221,132 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom fonts for Proyecto Casimiro */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+/* Refined Typography - Minimalist Sans Serif */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
-.font-serif-elegant {
-  font-family: 'Playfair Display', serif;
+/* Typography Classes */
+.font-refined {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.01em;
 }
 
-.font-sans-clean {
-  font-family: 'Inter', sans-serif;
+.font-mono-refined {
+  font-family: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
 }
 
-/* Texture overlay */
-.texture-overlay {
+/* Minimal texture overlay */
+.minimal-texture {
   position: relative;
 }
 
-.texture-overlay::before {
+.minimal-texture::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
-  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0);
+  background-size: 40px 40px;
   pointer-events: none;
   z-index: 1;
+}
+
+/* Refined Utilities */
+@layer utilities {
+  /* Black and white filters */
+  .filter-bw {
+    filter: grayscale(100%);
+  }
+  
+  .filter-bw-hover:hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  /* Subtle golden glow effects */
+  .glow-golden-subtle {
+    box-shadow: 0 0 0 1px var(--casimiro-gold-subtle);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glow-golden-hover:hover {
+    box-shadow: 0 0 0 1px var(--casimiro-gold-subtle), 0 0 20px rgba(201, 169, 110, 0.1);
+  }
+
+  /* Tracking animations */
+  .tracking-in {
+    animation: tracking-in-expand 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Fade in animation */
+  .fade-in-golden {
+    animation: fade-in-golden 1.5s ease-out;
+  }
+
+  @keyframes fade-in-golden {
+    0% {
+      opacity: 0;
+      filter: sepia(100%) hue-rotate(30deg) saturate(200%);
+    }
+    100% {
+      opacity: 1;
+      filter: none;
+    }
+  }
+
+  /* Parallax stars */
+  .parallax-stars {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallax-star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: var(--casimiro-gold-subtle);
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  /* Golden line animations */
+  .golden-line {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .golden-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--casimiro-gold-subtle), transparent);
+    animation: slide-golden 3s infinite linear;
+  }
+
+  @keyframes slide-golden {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
 }
