@@ -41,6 +41,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   
   /* New Refined Color Palette */
+  --casimiro-black: #0a0a0a; /* o el negro que estés usando */
   --casimiro-pure-black: #000000;
   --casimiro-rich-black: #0a0a0a;
   --casimiro-charcoal: #1a1a1a;
