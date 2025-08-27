@@ -97,8 +97,10 @@ export function Sessions() {
         loop
         muted
         playsInline
-        className="rounded-lg w-full h-full object-cover"
-      >
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+
+      
         <source src="/assets/sessions.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5.
       </video>
