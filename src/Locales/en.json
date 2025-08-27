@@ -55,10 +55,12 @@
   "button.discoverMore": "Discover More",
   "footer.title": "Proyecto Casimiro",
   "footer.subtitle": "Independent Artist & Music Producer",
-  "footer.rights": "© 2024 Proyecto Casimiro. All rights reserved."
+  "footer.rights": "© 2024 Proyecto Casimiro. All rights reserved.",
   "site.title": "Proyecto Casimiro",
   "nav.portfolio": "Portfolio",
   "nav.services": "Services",
   "nav.sessions": "Sessions",
-  "nav.contact": "Contact"
+  "nav.contact": "Contact",
+  "cta.listen": "Listen Now",
+  "cta.quote": "Request a Quote"
 }
