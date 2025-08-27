@@ -152,6 +152,22 @@
   --color-casimiro-gold-focus: var(--casimiro-gold-focus);
 }
 
+/* Tema oscuro por sección */
+.section-dark {
+  /* canvas de la sección */
+  --background: #111111;
+  --foreground: #ffffff;
+
+  /* las cards se mantienen blancas como en Figma */
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+
+  /* utilitarios oscuros si los usás */
+  --muted: #1a1a1a;
+  --accent: #1a1a1a;
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

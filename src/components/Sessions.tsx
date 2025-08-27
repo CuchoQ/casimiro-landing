@@ -91,7 +91,6 @@ export function Sessions() {
       id="sessions"
       className="relative isolate py-32 overflow-hidden bg-[var(--casimiro-rich-black)]"
     >
-      {/* Video de fondo (sin velo) */}
       <video
         autoPlay
         muted
@@ -99,10 +98,13 @@ export function Sessions() {
         playsInline
         preload="metadata"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-100"
+        // opcional: leve corrección sin “velo”
         style={{ filter: 'contrast(1.05) brightness(0.98)' }}
       >
         <source src={sessionVideo} type="video/mp4" />
       </video>
+      {/* Overlay oscuro sutil (sobre el video) 
+      <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />*/}
 
       {/* Elementos decorativos */}
       <div className="absolute inset-0 z-20 pointer-events-none">
@@ -110,7 +112,7 @@ export function Sessions() {
         <ParallaxStars />
       </div>
 
-      {/* Contenido */}
+      {/* Content */}
       <div className="relative z-30 w-full max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -118,16 +120,27 @@ export function Sessions() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          {/* Title */}
+          {/* Section Label */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center space-x-4 mb-8"
+          >
+           
+          </motion.div>
+
+         {/* Title */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="space-y-3 relative"
-            style={{ top: '-40px' }}
+            className="space-y-4 relative"
+            style={{ top: '-40px' }}   // ← AJUSTÁ este valor exacto (p.ej. -64, -72, -80)
           >
             <h2 className="font-refined text-5xl md:text-6xl lg:text-7xl text-white leading-tight font-light">
               {t('sessions_title')}
@@ -136,42 +149,56 @@ export function Sessions() {
               {t('sessions_subtitle')}
             </h3>
           </motion.div>
+
+
+          {/* Main Concept */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="font-refined text-xl md:text-2xl text-[var(--casimiro-gold-subtle)] italic font-light mt-8"
+          >
+          </motion.p>
         </motion.div>
 
-        {/* 4 puntos — compacto, icono al lado del título */}
+        {/* 4 Highlighted Points */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 items-start"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
         >
           {sessionPoints.map((point, index) => (
             <motion.div
               key={point.titleKey}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
               viewport={{ once: true }}
               className="group text-center"
             >
-              {/* Header compacto: icono + título en línea */}
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <div className="w-8 h-8 rounded-full border border-[var(--casimiro-gold-subtle)]/40 flex items-center justify-center">
-                  <Circle className="w-4 h-4 text-[var(--casimiro-gold-subtle)]" />
-                </div>
-                <h4 className="font-refined text-base md:text-lg text-white font-medium m-0">
-                  {t(point.titleKey)}
-                </h4>
+              {/* Minimalist icon */}
+              <div className="mb-6 flex justify-center">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="w-16 h-16 border border-[var(--casimiro-gold-subtle)]/30 rounded-full flex items-center justify-center group-hover:border-[var(--casimiro-gold-subtle)] transition-colors duration-300"
+                >
+                  <Circle className="w-6 h-6 text-[var(--casimiro-gold-subtle)]" fill="currentColor" />
+                </motion.div>
               </div>
 
-              {/* Descripción */}
-              <p className="font-refined text-[13px] md:text-sm text-gray-300 leading-relaxed">
+              {/* Content */}
+              <h4 className="font-refined text-lg text-white mb-3 font-medium">
+                {t(point.titleKey)}
+              </h4>
+              <p className="font-refined text-sm text-gray-300 leading-relaxed">
                 {t(point.descKey)}
               </p>
 
-              {/* Línea sutil */}
-              <div className="w-10 h-px bg-[var(--casimiro-gold-subtle)]/35 mx-auto mt-4 group-hover:bg-[var(--casimiro-gold-subtle)] transition-colors duration-300"></div>
+              {/* Subtle connecting line */}
+              <div className="w-12 h-px bg-[var(--casimiro-gold-subtle)]/40 mx-auto mt-6 group-hover:bg-[var(--casimiro-gold-subtle)] transition-colors duration-300"></div>
             </motion.div>
           ))}
         </motion.div>
@@ -180,7 +207,7 @@ export function Sessions() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
           viewport={{ once: true }}
           className="text-center"
         >
@@ -191,7 +218,7 @@ export function Sessions() {
         </motion.div>
       </div>
 
-      {/* Partículas mínimas */}
+      {/* Floating minimal elements */}
       <motion.div
         animate={{ y: [0, -15, 0], opacity: [0.3, 0.7, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}

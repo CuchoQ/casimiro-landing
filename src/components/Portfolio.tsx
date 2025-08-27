@@ -111,7 +111,7 @@ export function Portfolio() {
               <div className="relative group cursor-pointer" onClick={() => setIsModalOpen(true)}>
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1583927109257-f21c74dd0c3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW55bCUyMHJlY29yZCUyMGFsYnVtJTIwY292ZXIlMjBkYXJrJTIwbW9vZHl8ZW58MXx8fHwxNzU1NjU5NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                    src={porfolioimg }
                     alt="Proyecto Casimiro Album"
                     className="w-full h-96 object-cover filter-bw transition-all duration-500 group-hover:scale-105"
                   />
