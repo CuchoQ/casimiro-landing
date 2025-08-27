@@ -29,7 +29,7 @@ export function Hero() {
           playsInline
           className="w-full h-full object-cover absolute inset-0 z-0"
         >
-         <source src={heroVideo} type="video/mp4" />
+          <source src="/assets/hero-bg.mp4" type="video/mp4" />
           Tu navegador no soporta videos HTML5.
         </video>
 
