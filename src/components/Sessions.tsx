@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Circle } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from './LanguageContext';
-import sessionVideo from '@/assets/sessions.mp4';
+
 
 
 // Abstract Line Art Component
@@ -94,16 +94,13 @@ export function Sessions() {
     >
       <video
         autoPlay
-        muted
         loop
+        muted
         playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-100"
-        // opcional: leve corrección sin “velo”
-        style={{ filter: 'contrast(1.05) brightness(0.98)' }}
+        className="rounded-lg w-full h-full object-cover"
       >
-        <source src={sessionVideo} type="video/mp4" />
-    
+        <source src="/assets/sessions.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
       </video>
       {/* Overlay oscuro sutil (sobre el video) 
       <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />*/}

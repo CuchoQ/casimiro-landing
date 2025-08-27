@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from './LanguageContext';
 import casimiroLogo from '@/assets/casimiro-logo.png';
-import heroVideo from '@/assets/hero-bg.mp4'; // arriba del todo
+
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
