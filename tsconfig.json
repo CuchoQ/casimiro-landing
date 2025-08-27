@@ -20,5 +20,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/types"],
+  "exclude": ["node_modules", "dist", "src/components/ui_unused"]
 }
