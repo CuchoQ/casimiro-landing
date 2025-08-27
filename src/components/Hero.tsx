@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from './LanguageContext';
 import casimiroLogo from '@/assets/casimiro-logo.png';
+import heroVideo from '@/assets/hero-bg.mp4'; // arriba del todo
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -28,7 +29,7 @@ export function Hero() {
           playsInline
           className="w-full h-full object-cover absolute inset-0 z-0"
         >
-          <source src="/src/assets/hero-bg.mp4" type="video/mp4" />
+         <source src={heroVideo} type="video/mp4" />
           Tu navegador no soporta videos HTML5.
         </video>
 

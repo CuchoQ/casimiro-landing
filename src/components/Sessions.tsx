@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { useLanguage } from './LanguageContext';
 import sessionVideo from '@/assets/sessions.mp4';
 
+
 // Abstract Line Art Component
 const AbstractLineArt = () => (
   <svg
@@ -102,6 +103,7 @@ export function Sessions() {
         style={{ filter: 'contrast(1.05) brightness(0.98)' }}
       >
         <source src={sessionVideo} type="video/mp4" />
+    
       </video>
       {/* Overlay oscuro sutil (sobre el video) 
       <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />*/}
