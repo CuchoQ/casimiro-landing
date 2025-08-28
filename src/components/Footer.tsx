@@ -33,7 +33,7 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: 'https://www.facebook.com/proyectocasimiro/',
+    href: 'https://www.linkedin.com/company/proyecto-casimiro',
     label: 'LinkedIn',
     name: 'LindkedIn'
   }

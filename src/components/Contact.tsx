@@ -98,7 +98,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="relative py-16 bg-[#f8f8f8] overflow-hidden">
+    <section id="contact" className="relative py-10 bg-[#f8f8f8] overflow-hidden">
       
       {/* Subtle texture overlay */}
       <div className="absolute inset-0 minimal-texture opacity-40"></div>
@@ -140,6 +140,7 @@ export function Contact() {
             <div className="w-14 h-14 border border-[var(--casimiro-gold-subtle)]/30 rounded-lg flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-[var(--casimiro-gold-subtle)]" />
             </div>
+          
           </motion.div>
 
           <motion.h2
@@ -240,7 +241,7 @@ export function Contact() {
               {/* Optional Social Media Fields */}
               <div className="space-y-3">
                 <h4 className="font-refined text-sm text-[var(--casimiro-dark-gray)] font-medium mb-3">
-                  Social Media {t('contact_optional')}
+                  {t('contact_optional')}
                 </h4>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

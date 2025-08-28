@@ -18,7 +18,7 @@ export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[var(--casimiro-pure-black)]">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[var(--casimiro-pure-black)]">
       
       {/* 🎥 VIDEO BACKGROUND */}
       <div className="absolute inset-0 z-0">

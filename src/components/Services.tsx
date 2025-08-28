@@ -94,7 +94,7 @@ const ArtisticBackground = () => (
 );
 
 export function Services() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
       <section
@@ -227,7 +227,7 @@ export function Services() {
       </div>
 
 
-        {/* CTA Section */}
+      {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -235,11 +235,14 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Button className="bg-[var(--casimiro-gold-subtle)] text-[var(--casimiro-pure-black)] hover:bg-[var(--casimiro-pure-black)] hover:text-[var(--casimiro-gold-subtle)] border-2 border-[var(--casimiro-gold-subtle)] font-refined text-base px-12 py-6 rounded-xl transition-all duration-300 group shadow-lg hover:shadow-xl font-medium">
-            Consultar / Inquire
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-          </Button>
+          <a href="#contact">
+            <Button className="bg-[var(--casimiro-gold-subtle)] text-[var(--casimiro-pure-black)] hover:bg-[var(--casimiro-pure-black)] hover:text-[var(--casimiro-gold-subtle)] border-2 border-[var(--casimiro-gold-subtle)] font-refined text-base px-12 py-6 rounded-xl transition-all duration-300 group shadow-lg hover:shadow-xl font-medium">
+               {t('service_button')}
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </a>
         </motion.div>
+
 
         {/* Decorative Elements */}
         <motion.div

@@ -14,10 +14,10 @@ const translations = {
   hero_title_en: 'Art crosses through us, music reveals us.',
   
   // About Me - New Section
-  about_title_es: 'Sobre mí',
-  about_title_en: 'About Me',
-  about_description_es: 'Productor, guía artístico y diseñador de sonido con más de 20 años de experiencia. Proyecto Casimiro fusiona sensibilidad y precisión técnica para acompañar artistas desde la primera idea hasta la mezcla final.',
-  about_description_en: 'Producer, artistic guide and sound designer with over 20 years of experience. Project Casimiro merges sensitivity and technical precision to support artists from the first idea to the final mix.',
+  about_title_es: 'Sobre el proyecto',
+  about_title_en: 'About the Project',
+  about_description_es: 'Producción, acompañamiento y visión artística para que cada sonido encuentre su camino. Proyecto Casimiro es un espacio de creación y guía para músicos y bandas, donde conviven obras propias y las de quienes nos invitan a ser parte de su proceso artístico-musical.',
+  about_description_en: 'Production, accompaniment, and artistic vision so that each sound finds its path. Proyecto Casimiro is a space for creation and guidance for musicians and bands, where their own works coexist with those who invite us to be part of their artistic and musical process.',
   
   // Portfolio - Compressed
   portfolio_label_es: 'Obras',
@@ -36,25 +36,25 @@ const translations = {
   portfolio_cta_en: 'Explore',
   
   // Services - Current Content
-  services_title_es: 'Nuestros Servicios',
-  services_title_en: 'Our Services',
-  services_subtitle_es: 'Del boceto al escenario, acompañamos cada etapa de tu música.',
-  services_subtitle_en: 'From sketch to stage, we support every step of your music.',
+  services_title_es: 'Te acompañamos en tu proceso creativo',
+  services_title_en: 'We accompany you in your creative process',
+  services_subtitle_es: 'Más que servicios, procesos compartidos.',
+  services_subtitle_en: 'More than services, shared processes.',
   
   // Service 1 - Music Production & Preproduction
-  service1_title_es: 'Producción Musical & Preproducción',
+  service1_title_es: 'Producción Musical y Preproducción',
   service1_title_en: 'Music Production & Preproduction',
   service1_item1_es: 'Hoja de ruta creativa: estética y planificación',
   service1_item1_en: 'Creative roadmap: aesthetics and planning',
   service1_item2_es: 'Demos referenciales para definir dirección antes del estudio',
   service1_item2_en: 'Reference demos to define direction before the studio',
-  service1_item3_es: 'Grabación (hogar o estudio) con tomas dirigidas',
-  service1_item3_en: 'Recording (home or studio) with guided takes',
-  service1_item4_es: 'Edición y mezcla (mastering tercerizado)',
+  service1_item3_es: 'Grabación (home estudio  o estudio profesional) con tomas dirigidas',
+  service1_item3_en: 'Recording (home studio or professional studio) with guided takes',
+  service1_item4_es: 'Edición y mezcla (mastering a cargo de  profesionales externos)',
   service1_item4_en: 'Editing and mixing (mastering outsourced)',
   
   // Service 2 - Composition & Arrangements
-  service2_title_es: 'Composición & Arreglos',
+  service2_title_es: 'Composición y Arreglos',
   service2_title_en: 'Composition & Arrangements',
   service2_item1_es: 'Co-writing: convertir ideas en canciones',
   service2_item1_en: 'Co-writing: turning ideas into songs',
@@ -62,8 +62,8 @@ const translations = {
   service2_item2_en: 'Full composition tailored to artistic needs',
   service2_item3_es: 'Arreglos para vientos, cuerdas, voces y texturas',
   service2_item3_en: 'Arrangements for horns, strings, voices, and textures',
-  service2_item4_es: 'Música para cine y teatro',
-  service2_item4_en: 'Music for film and theater',
+  service2_item4_es: 'Composición de música original para cine y teatro',
+  service2_item4_en: 'Composition of original music for film and theatre',
   
   // Service 3 - Sessions & Artistic Support
   service3_title_es: 'Sesiones & Acompañamiento Artístico',
@@ -78,6 +78,8 @@ const translations = {
   service3_item4_en: 'Network of professional session musicians',
   service3_item5_es: 'Orientación en propiedad intelectual y registro',
   service3_item5_en: 'Guidance on intellectual property and registration',
+  service_button_es: 'Consultar',
+  service_button_en: 'Inquire'
   
   // Sessions - Casimiro Sessions Content
   sessions_title_es: 'Sesiones Casimiro',
@@ -87,8 +89,8 @@ const translations = {
 
   sessions_point1_title_es: 'Proceso Colaborativo',
   sessions_point1_title_en: 'Collaborative Process',
-  sessions_point1_desc_es: 'Anticipadamente, mínimo un mes, comenzamos a trabajar con el artista (composición, ensayos, definición estética).',
-  sessions_point1_desc_en: 'At least a month in advance, we begin working with the artist (composition, rehearsals, aesthetic definition).',
+  sessions_point1_desc_es: 'Comenzamos a trabajar con el artista al menos un mes antes (composición, ensayos, definición estética).',
+  sessions_point1_desc_en: 'We start working with the artist at least a month in advance (composition, rehearsals, aesthetic definition).',
 
   sessions_point2_title_es:'Espacios que nos conectan',
   sessions_point2_title_en:'Spaces that connect us',
@@ -97,36 +99,15 @@ const translations = {
 
   sessions_point3_title_es:'Momento Vivo',
   sessions_point3_title_en:'Living Moment',
-  sessions_point3_desc_es:'Un fin de semana de convivencia y grabación directa. La autenticidad, espontaneidad y energía compartida definen la sesión.',
-  sessions_point3_desc_en:'A weekend of coexistence and direct recording. Authenticity, spontaneity, and shared energy define the session.',
+  sessions_point3_desc_es: 'Un fin de semana de convivencia creativa y grabación en vivo.',
+  sessions_point3_desc_en: 'A weekend of creative coexistence and live recording.',
 
   sessions_point4_title_es:'Narrativa Artística',
   sessions_point4_title_en:'Artistic Narrative',
   sessions_point4_desc_es:'Entrevistas, imágenes y narrativa audiovisual expanden la experiencia más allá de la música.',
   sessions_point4_desc_en:'Interviews, images and audiovisual storytelling expand the experience beyond the music.',
 
-
-  
-  // 4 Pillars
-  //sessions_pillar1_title_es: 'Proceso Colaborativo',
-  //sessions_pillar1_title_en: 'Collaborative Process',
-  //sessions_pillar1_desc_es: 'Un mes previo trabajamos con el artista (composición, ensayos, definición estética).',
-  //sessions_pillar1_desc_en: 'One month prior we work with the artist (composition, rehearsals, aesthetic definition).',
-  
-  sessions_pillar2_title_es: 'Espacios que nos conectan',
-  sessions_pillar2_title_en: 'Spaces that connect us',
-  sessions_pillar2_desc_es: 'Locaciones únicas (casas de montaña, entornos naturales, espacios singulares) que actúan como canales de conexión con la naturaleza, el universo y lo infinito.',
-  sessions_pillar2_desc_en: 'Unique locations (mountain houses, natural environments, singular spaces) that act as channels of connection with nature, the universe, and the infinite.',
-  
-  sessions_pillar3_title_es: 'Momento Vivo',
-  sessions_pillar3_title_en: 'Living Moment',
-  sessions_pillar3_desc_es: 'Un fin de semana de convivencia y grabación directa. La autenticidad, espontaneidad y energía compartida definen la sesión.',
-  sessions_pillar3_desc_en: 'A weekend of coexistence and direct recording. Authenticity, spontaneity, and shared energy define the session.',
-  
-  sessions_pillar4_title_es: 'Narrativa Artística',
-  sessions_pillar4_title_en: 'Artistic Narrative',
-  sessions_pillar4_desc_es: 'Entrevistas, imágenes y narrativa audiovisual expanden la experiencia más allá de la música.',
-  sessions_pillar4_desc_en: 'Interviews, images and audiovisual storytelling expand the experience beyond the music.',
+ 
   
   sessions_cta_es: 'Descubrir',
   sessions_cta_en: 'Discover',
@@ -146,8 +127,8 @@ const translations = {
   contact_message_en: 'Message',
   
   // Optional Fields
-  contact_optional_es: '(Opcional)',
-  contact_optional_en: '(Optional)',
+  contact_optional_es: 'Redes sociales (Opcional)',
+  contact_optional_en: 'Social media (Optional)',
   contact_instagram_es: 'Instagram',
   contact_instagram_en: 'Instagram',
   contact_facebook_es: 'Facebook',
